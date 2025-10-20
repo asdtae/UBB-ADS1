@@ -1,0 +1,3 @@
+D:/ads/ADSTester/cmake-build-debug/CMakeFiles/ADSTester.dir
+D:/ads/ADSTester/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/ads/ADSTester/cmake-build-debug/CMakeFiles/rebuild_cache.dir
