@@ -1,12 +1,12 @@
 /*
 Mathe Ruben-Jonathan
 512/1
-Lab2/01
+Lab2/03
 
 Kijelentés:
     Adott egy római szám, írjuk ki arab számjegyekkel!
 */
-
+/*
 #define Black "\033[30m"
 #define Red "\033[31m"
 #define Green "\033[32m"
@@ -24,43 +24,81 @@ Kijelentés:
 #define Bright_Magenta "\033[95m"
 #define Bright_Cyan "\033[96m"
 #define Bright_White "\033[97m"
-
+*/
 
 #include <iostream>
-#include <cstring>
 
 using namespace std;
 
-void roman2arab(char s[101], int translatedCString[100])
+void roman2arab(const char s[101], unsigned long long &result)
 {
     int i=0;
+    int translatedCString[100]={0};
 
-    while(strcmp(&s[i],"")!=0)
+    while (s[i] != '\0')
     {
-        printf("%s%c%s, ",Bright_Yellow,s[i],White);
+        //printf("%s%c%s, ",Bright_Yellow,s[i],White);
 
-
+        switch(s[i])
+        {
+            case 'I':
+                translatedCString[i] = 1;
+                break;
+            case 'V':
+                translatedCString[i] = 5;
+                break;
+            case 'X':
+                translatedCString[i] = 10;
+                break;
+            case 'L':
+                translatedCString[i] = 50;
+                break;
+            case 'C':
+                translatedCString[i] = 100;
+                break;
+            case 'D':
+                translatedCString[i] = 500;
+                break;
+            case 'M':
+                translatedCString[i] = 1000;
+                break;
+            //default:
+                //printf("\n%sERROR: %s%c%s\n",Red,Bright_Red,s[i],White);
+        }
 
         i++;
     }
 
-    printf("\n");
+    //printf("\n");
+
+    int n = i;
+    for(i=0; i<n; i++)
+    {
+        if(i < n - 1 && translatedCString[i] < translatedCString[i+1])
+        {
+            result -= translatedCString[i];
+        }
+        else result += translatedCString[i];
+        //printf("%s%d%s, ",Bright_Green,translatedCString[i],White);
+    }
+
+    //printf("\n");
 }
 
 int main()
 {
     char s[101]={""};
-    int temp_convert[100];
-    char CLionBugWorkaround;
+
+    //char CLionBugWorkaround;
     unsigned long long numb = 0;
 
     cin >> s;
-..
-    roman2arab(s,temp_convert);
+
+    roman2arab(s,numb);
 
     cout << "A megadott szam arab szamjegyekkel: " << numb;
 
-    cin >> CLionBugWorkaround;
+    //cin >> CLionBugWorkaround;
 
     return 0;
 }
@@ -75,5 +113,5 @@ int main()
  *  M   -   1000
  *
  *  TEST0:  MMMCDXCIX
- *    OUT:
+ *    OUT:  A megadott szam arab szamjegyekkel: 3499
  */
