@@ -27,19 +27,53 @@ Kijelentés:
 */
 
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
 void arab2roman(int &numb, char s[101])
 {
-    int transc[4]={0}, i=0;
-
-
-
-    for(; i>=0; i--)
+    int i;
+    struct numbs
     {
-        transc[i] = numb%10;
-        numb /= 10;
+        char roman[3];
+        int arab;
+    } tranz[13];
+
+    strcpy(tranz[0].roman,"I");
+    tranz[0].arab = 1;
+    strcpy(tranz[1].roman,"IV");
+    tranz[1].arab = 4;
+    strcpy(tranz[2].roman,"V");
+    tranz[2].arab = 5;
+    strcpy(tranz[3].roman,"IX");
+    tranz[3].arab = 9;
+    strcpy(tranz[4].roman,"X");
+    tranz[4].arab = 10;
+    strcpy(tranz[5].roman,"XL");
+    tranz[5].arab = 40;
+    strcpy(tranz[6].roman,"L");
+    tranz[6].arab = 50;
+    strcpy(tranz[7].roman,"XC");
+    tranz[7].arab = 90;
+    strcpy(tranz[8].roman,"C");
+    tranz[8].arab = 100;
+    strcpy(tranz[9].roman,"CD");
+    tranz[9].arab = 400;
+    strcpy(tranz[10].roman,"D");
+    tranz[10].arab = 500;
+    strcpy(tranz[11].roman,"CM");
+    tranz[11].arab = 900;
+    strcpy(tranz[12].roman,"M");
+    tranz[12].arab = 1000;
+
+    for(i=12; i>=0; i--)
+    {
+        while (numb >= tranz[i].arab)
+        {
+            numb -= tranz[i].arab;
+            strcat(s,tranz[i].roman);
+        }
     }
 }
 
@@ -70,5 +104,5 @@ int main()
  *  M   -   1000
  *
  *  TEST0:  1492
- *    OUT:
+ *    OUT:  MCDXCII
  */
