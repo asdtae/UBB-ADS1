@@ -1,0 +1,3 @@
+D:/ads-1/03/cmake-build-debug/CMakeFiles/03.dir
+D:/ads-1/03/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/ads-1/03/cmake-build-debug/CMakeFiles/rebuild_cache.dir
