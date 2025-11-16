@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "02::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-02-Debug-35729786ebaa16c1552f.json",
+					"jsonFile" : "target-02-Debug-e20c609b10978eb80176.json",
 					"name" : "02",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/github/UBB-ADS1/labor/02/cmake-build-debug",
-		"source" : "D:/github/UBB-ADS1/labor/02"
+		"build" : "E:/GitHub/UBB-ADS1/labor/02/cmake-build-debug",
+		"source" : "E:/GitHub/UBB-ADS1/labor/02"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 4
+		"minor" : 8
 	}
 }

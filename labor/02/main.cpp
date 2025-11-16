@@ -43,4 +43,9 @@ int fela()
 int main()
 {
     cout << fela();
+
+    int n;
+    cin >> n;
+
+    return 0;
 }
