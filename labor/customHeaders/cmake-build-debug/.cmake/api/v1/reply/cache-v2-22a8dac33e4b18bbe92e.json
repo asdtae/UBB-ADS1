@@ -2,42 +2,6 @@
 	"entries" : 
 	[
 		{
-			"name" : "ADSTester_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "D:/ads/ADSTester/cmake-build-debug"
-		},
-		{
-			"name" : "ADSTester_IS_TOP_LEVEL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "ON"
-		},
-		{
-			"name" : "ADSTester_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "D:/ads/ADSTester"
-		},
-		{
 			"name" : "CMAKE_ADDR2LINE",
 			"properties" : 
 			[
@@ -91,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/ads/ADSTester/cmake-build-debug"
+			"value" : "d:/github/UBB-ADS1/labor/customHeaders/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -659,7 +623,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/ads/ADSTester"
+			"value" : "D:/github/UBB-ADS1/labor/customHeaders"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -671,7 +635,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/ADSTester"
+			"value" : "C:/Program Files (x86)/customHeaders"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -887,7 +851,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "ADSTester"
+			"value" : "customHeaders"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1264,6 +1228,42 @@
 			],
 			"type" : "BOOL",
 			"value" : "FALSE"
+		},
+		{
+			"name" : "customHeaders_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "D:/github/UBB-ADS1/labor/customHeaders/cmake-build-debug"
+		},
+		{
+			"name" : "customHeaders_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "customHeaders_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "D:/github/UBB-ADS1/labor/customHeaders"
 		}
 	],
 	"kind" : "cache",

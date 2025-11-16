@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "ADSTester",
+					"name" : "customHeaders",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "ADSTester::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ADSTester-Debug-0b5a96967a3227ebad7b.json",
-					"name" : "ADSTester",
+					"id" : "customHeaders::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-customHeaders-Debug-500a82534cdf5f5d86a2.json",
+					"name" : "customHeaders",
 					"projectIndex" : 0
 				}
 			]
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/ads/ADSTester/cmake-build-debug",
-		"source" : "D:/ads/ADSTester"
+		"build" : "D:/github/UBB-ADS1/labor/customHeaders/cmake-build-debug",
+		"source" : "D:/github/UBB-ADS1/labor/customHeaders"
 	},
 	"version" : 
 	{

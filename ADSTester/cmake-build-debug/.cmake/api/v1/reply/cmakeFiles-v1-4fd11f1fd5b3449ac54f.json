@@ -767,8 +767,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "D:/ads/ADSTester/cmake-build-debug",
-		"source" : "D:/ads/ADSTester"
+		"build" : "D:/github/UBB-ADS1/ADSTester/cmake-build-debug",
+		"source" : "D:/github/UBB-ADS1/ADSTester"
 	},
 	"version" : 
 	{
