@@ -1,41 +1,29 @@
 #include <iostream>
 
+#define SIZE 13
+
 #include "IntArray.h"
 #include "rbxio.h"
 #include "rbxerr.h"
+#include "LList.h"
+#include "HashTable.h"
 
 using namespace std;
 
 int main()
 {
-    // rbxio fin()/fout() test
-    char ch[100];
-    fin("in",ch);
-    fout("out",ch);
+    HashTable* H = CreateHT(SIZE);
 
-    // io test
-    int a = 90;
-    in(a);
-    out(a);
+    InsertHT(H,2);
+    InsertHT(H,-5);
+    InsertHT(H,3);
+    InsertHT(H,18);
+    InsertHT(H,21);
+    InsertHT(H,19);
+    InsertHT(H,35);
+    InsertHT(H,41);
 
-    char b[10];
-    in(b);
-    out(b);
-
-//    error(3,"testttt");
-
-    /*
-    IntArray* V = Create(15);
-    cout << GetElement(V, 5) << endl;
-
-    error(1,"pelda");
-
-    SetElement(V, 3, 18);
-    SetElement(V, 6, -18);
-
-    Print(V);
-    Destroy(V);
-    */
+    FindHT(H,21);
 
     char s[90];
     gets(s);

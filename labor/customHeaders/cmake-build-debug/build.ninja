@@ -67,6 +67,18 @@ build CMakeFiles/customHeaders.dir/rbxerr.cpp.obj: CXX_COMPILER__customHeaders_D
   OBJECT_DIR = CMakeFiles\customHeaders.dir
   OBJECT_FILE_DIR = CMakeFiles\customHeaders.dir
 
+build CMakeFiles/customHeaders.dir/LList.cpp.obj: CXX_COMPILER__customHeaders_Debug D$:/github/UBB-ADS1/labor/customHeaders/LList.cpp || cmake_object_order_depends_target_customHeaders
+  DEP_FILE = CMakeFiles\customHeaders.dir\LList.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\customHeaders.dir
+  OBJECT_FILE_DIR = CMakeFiles\customHeaders.dir
+
+build CMakeFiles/customHeaders.dir/HashTable.cpp.obj: CXX_COMPILER__customHeaders_Debug D$:/github/UBB-ADS1/labor/customHeaders/HashTable.cpp || cmake_object_order_depends_target_customHeaders
+  DEP_FILE = CMakeFiles\customHeaders.dir\HashTable.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\customHeaders.dir
+  OBJECT_FILE_DIR = CMakeFiles\customHeaders.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target customHeaders
@@ -75,7 +87,7 @@ build CMakeFiles/customHeaders.dir/rbxerr.cpp.obj: CXX_COMPILER__customHeaders_D
 #############################################
 # Link the executable customHeaders.exe
 
-build customHeaders.exe: CXX_EXECUTABLE_LINKER__customHeaders_Debug CMakeFiles/customHeaders.dir/main.cpp.obj CMakeFiles/customHeaders.dir/rbxio.cpp.obj CMakeFiles/customHeaders.dir/rbxerr.cpp.obj
+build customHeaders.exe: CXX_EXECUTABLE_LINKER__customHeaders_Debug CMakeFiles/customHeaders.dir/main.cpp.obj CMakeFiles/customHeaders.dir/rbxio.cpp.obj CMakeFiles/customHeaders.dir/rbxerr.cpp.obj CMakeFiles/customHeaders.dir/LList.cpp.obj CMakeFiles/customHeaders.dir/HashTable.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\customHeaders.dir

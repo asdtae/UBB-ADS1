@@ -3,4 +3,4 @@ project(customHeaders)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(customHeaders main.cpp rbxio.cpp rbxerr.cpp)
+add_executable(customHeaders main.cpp rbxio.cpp rbxerr.cpp LList.cpp HashTable.cpp)
