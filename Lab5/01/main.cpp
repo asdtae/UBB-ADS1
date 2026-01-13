@@ -1,7 +1,7 @@
 /*
  *  Mathe Ruben-Jonathan
  *  512
- *  Lab5/01-old
+ *  Lab5/01
  *
  *  Kijelentes:
  *  Adott egy n elemu sorozat.

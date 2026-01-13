@@ -1,18 +1,57 @@
-#include <iostream>
+/*
+ *  Mathe Ruben-Jonathan
+ *  512
+ *  Lab5/02
+ *
+ *  Kijelentes:
+ *  Adot ket csoport felev vegi atlagainak listaja (novekvo sorrendben).
+ *  Allıtsunk elo ezekbol egyetlen listat, mely szinten novekvo sorrendben van!
+ */
 
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+#include <iostream>
+#include "LList.h"
+
+using namespace std;
+
+void getN(int &n)
+{
+    cin >> n;
+}
+
+void read(LList* v, int &n)
+{
+    type tmp = 0.0;
+
+    while(n > 0)
+    {
+        cin >> tmp;
+        Insert_Sorted(v,tmp);
+        n--;
+    }
+}
+
 int main()
 {
-    // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the <b>lang</b> variable name to see how CLion can help you rename it.
-    auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
+    // INIT
+    int len = 0;
+    LList* v = Create();
 
-    for (int i = 1; i <= 5; i++)
-    {
-        // TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        std::cout << "i = " << i << std::endl;
-    }
+    // IN
+    getN(len);
+    read(v,len);
 
-    return 0;
-    // TIP See CLion help at <a href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>. Also, you can try interactive lessons for CLion by selecting 'Help | Learn IDE Features' from the main menu.
+    getN(len);
+    read(v,len);
+
+    // OUT
+    Print(v);
+
+    // CLEANUP
+    Destroy(v);
 }
+
+/*
+ *  Res0: 4.1 4.2 5.9 5.9 6.1 6.23 7.7 7.8 8.2 8.7 9.53 9.61
+ *  Ans0: 4.1 4.2 5.9 5.9 6.1 6.23 7.7 7.8 8.2 8.7 9.53 9.61
+ *
+ */
