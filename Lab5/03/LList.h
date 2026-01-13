@@ -1,13 +1,12 @@
 #pragma once
-#define type double
+#define type long int
 
 struct LList;
 
 LList* Create();
 void Destroy(LList*);
 
-void Insert(LList*, type);
 void Insert_Sorted(LList*, type);
+void Shift(LList*, int);
 
-LList* Merge(LList*, LList*);
 void Print(const LList*);

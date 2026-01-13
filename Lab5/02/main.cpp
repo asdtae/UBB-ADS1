@@ -25,7 +25,7 @@ void read(LList* v, int &n)
     while(n > 0)
     {
         cin >> tmp;
-        Insert_Sorted(v,tmp);
+        Insert(v,tmp);
         n--;
     }
 }
@@ -34,24 +34,21 @@ int main()
 {
     // INIT
     int len = 0;
-    LList* v = Create();
 
-    // IN
-    getN(len);
-    read(v,len);
+    cout << "Enter number of elements: ";
 
-    getN(len);
-    read(v,len);
-
-    // OUT
-    Print(v);
-
-    // CLEANUP
-    Destroy(v);
+    return 0;
 }
 
 /*
  *  Res0: 4.1 4.2 5.9 5.9 6.1 6.23 7.7 7.8 8.2 8.7 9.53 9.61
  *  Ans0: 4.1 4.2 5.9 5.9 6.1 6.23 7.7 7.8 8.2 8.7 9.53 9.61
+ *
+ *  Res1: 4.1 5.9 7.8 8.7 9.53 4.2 5.9 6.1 6.23 7.7 8.2 9.61
+ *  Ans1: 4.1 4.2 5.9 5.9 6.1 6.23 7.7 7.8 8.2 8.7 9.53 9.61
+ *
+ *  Res2: 4.1 4.2 5.9 5.9 6.1 6.23 7.7 7.8 8.2 8.7 9.53 9.61
+ *  Ans2: 4.1 4.2 5.9 5.9 6.1 6.23 7.7 7.8 8.2 8.7 9.53 9.61
+ *
  *
  */
