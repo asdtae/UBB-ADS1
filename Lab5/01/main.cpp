@@ -1,12 +1,12 @@
 /*
  *  Mathe Ruben-Jonathan
  *  512
- *  Lab5/01
+ *  Lab5/01-old
  *
  *  Kijelentes:
- *  Adott egy n elem˝u sorozat.
- *  Irjunk programot, amely t¨orli a sorozatb´ol a 7-tel
- *  oszthat´o elemeket. A program ´ırja ki a megv´altozott sorozatot!
+ *  Adott egy n elemu sorozat.
+ *  Irjunk programot, amely torli a sorozatbol a 7-tel
+ *  oszthato elemeket. A program ırja ki a megvaltozott sorozatot!
  */
 
 #include <iostream>
@@ -43,7 +43,7 @@ int main()
     read(v,n);
 
     // LOGIC
-    n = DelByDiv(v,n,7);
+    DelByDiv(v,n,7);
 
     // WRITE
     write(v,n);

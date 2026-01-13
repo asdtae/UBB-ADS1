@@ -58,6 +58,23 @@ void Insert(LList* v, type x)
         Node* p = CreateNode(x);
         Node* q = v->head;
 
+        while(q->next != nullptr) q = q->next;
+        q->next = p;
+        p->next = nullptr;
+    }
+}
+
+void Insert_Sorted(LList* v, type x)
+{
+    if(IsEmpty(v))
+    {
+        v->head = CreateNode(x);
+    }
+    else
+    {
+        Node* p = CreateNode(x);
+        Node* q = v->head;
+
         while(q->data <= x && q->next != nullptr) q = q->next;
         if(q->data > x)
         {
@@ -87,21 +104,17 @@ void Delete(LList* v, type x)
         else
         {
             Node* q = v->head;
-            while(p->data != x)
+            while(p->data != x && p->next != nullptr)
             {
-                if(p->next != nullptr)
-                {
-                    q = p;
-                    p = p->next;
-                }
-                else break;
+                q = p;
+                p = p->next;
             }
-            if(p->next == nullptr)
+            if(p->next == nullptr && p->data == x)
             {
                 q->next = nullptr;
                 delete p;
             }
-            else
+            else if(p->data == x)
             {
                 q->next = p->next;
                 delete p;
@@ -110,23 +123,53 @@ void Delete(LList* v, type x)
     }
 }
 
-int DelByDiv(LList* v, int n, int numb)
+void DelByDiv(LList* v, int &n, int numb)
 {
     Node* p = v->head;
+    Node* q = nullptr;
     while(p != nullptr)
     {
-        if(p->data % numb == 0)
+        if (q == nullptr)
         {
-            Node* q = p->next;
-            // fuggvenyhivas helyett toroljem, hogy ne kezdje a keresest az elejetol
-            Delete(v,p->data);
-            n--;
-            p = q;
+            q = p;
+            p = p->next;
         }
-        else p = p->next;
+        else
+        {
+            if(q->data % numb == 0 && v->head == q)
+            {
+                v->head = q->next;
+                delete q;
+
+                q = p;
+                p = p->next;
+                n--;
+            }
+            else if(p->data % numb == 0)
+            {
+                q->next = p->next;
+                delete p;
+
+                p = q->next;
+                n--;
+            }
+            else
+            {
+                q = p;
+                p = p->next;
+            }
+        }
     }
 
-    return n;
+    if(q != nullptr)
+    {
+        if(q->data % numb == 0)
+        {
+            delete q;
+            n--;
+            v->head = nullptr;
+        }
+    }
 }
 
 void Print(LList* v)
