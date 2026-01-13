@@ -145,25 +145,8 @@ LList* Merge(LList* v1, LList* v2)
         p = p->next;
     }
 
-    if(p1 == nullptr)
-    {
-        while(p2 != nullptr)
-        {
-            p->next = p2;
-            p2 = p2->next;
-            p = p->next;
-        }
-    }
-
-    if(p2 == nullptr)
-    {
-        while(p1 != nullptr)
-        {
-            p->next = p1;
-            p1 = p1->next;
-            p = p->next;
-        }
-    }
+    if(p1 == nullptr) p->next = p2;
+    if(p2 == nullptr) p->next = p1;
 
     v1->head = nullptr;
     v2->head = nullptr;
@@ -175,6 +158,8 @@ void Print(const LList* v)
 {
     Node *p = v->head;
 
+    cout
+
     if (p != nullptr)
     {
         cout<<p->data;
@@ -184,12 +169,6 @@ void Print(const LList* v)
     while(p != nullptr)
     {
         cout<<' '<<p->data;
-        p = p->next;
-    }
-
-    while(p != nullptr)
-    {
-        cout<<p->data<<' ';
         p = p->next;
     }
 }

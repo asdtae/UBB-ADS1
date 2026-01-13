@@ -1,5 +1,5 @@
 /*
- *  Mathe Ruben-Jonathan
+*  Mathe Ruben-Jonathan
  *  512
  *  Lab5/02
  *
@@ -34,10 +34,25 @@ int main()
 {
     // INIT
     int len = 0;
+    LList* v1 = Create();
+    LList* v2 = Create();
+    LList* vRes = Create();
 
-    cout << "Enter number of elements: ";
+    // IN
+    getN(len);
+    read(v1,len);
 
-    return 0;
+    getN(len);
+    read(v2,len);
+
+    // OUT
+    vRes = Merge(v1,v2);
+    Print(vRes);
+
+    // CLEANUP
+    Destroy(v1);
+    Destroy(v2);
+    Destroy(vRes);
 }
 
 /*
