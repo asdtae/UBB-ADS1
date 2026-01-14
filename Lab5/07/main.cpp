@@ -1,17 +1,18 @@
 /*
-*  Mathe Ruben-Jonathan
+ *  Mathe Ruben-Jonathan
  *  512
- *  Lab5/06
+ *  Lab5/07
  *
  *  Kijelentes:
- *  Egy csoporton belul sztarnak nevezzuk azt a szemelyt, akit mindenki ismer,
- *  de o nem ismer senkit. Adott egy 𝑛 × 𝑛-es matrix amely n szemely ismerettsegi
- *  viszonyat mutatja (azaz 𝑎[𝑖][𝑗] = 1, ha 𝑖 ismeri 𝑗-t). Hatarozzuk meg, hogy van-e
-    sztar a csoportban, es ha igen, ırjuk ki a sorszamat.
+ *  Adott 𝑛 folyamat. Minden folyamatnak ismerjuk az azonosıtojat (PID)
+ *  es a vegrehajtashoz szukseges idoegyseget. A folyamatokat FIFO elv alapjan
+ *  utemezzuk, azaz az elsonek beerkezett folyamatot hajtjuk vegre eloszor. ´Irjunk
+ *  alkalmazast, amely a folyamatok utemezeset szimulalja, valamint hatarozzuk
+ *  meg a folyamatok atlag varakozasi idejet
  */
 
 #include <iostream>
-#include "Stack.h"
+#include "Queue.h"
 
 using namespace std;
 
