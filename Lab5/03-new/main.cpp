@@ -1,5 +1,5 @@
 /*
- *  Mathe Ruben-Jonathan
+*  Mathe Ruben-Jonathan
  *  512
  *  Lab5/03
  *
@@ -9,7 +9,7 @@
  */
 
 #include <iostream>
-#include "LList.h"
+#include "DLList.h"
 
 using namespace std;
 
@@ -18,7 +18,7 @@ void getN(int &n)
     cin >> n;
 }
 
-void read(LList* v, int &n)
+void read(DLList* v, int &n)
 {
     type tmp = 0.0;
 
@@ -35,7 +35,7 @@ int main()
     // INIT
     int len = 0;
     int k = 0;
-    LList* v = Create();
+    DLList* v = Create();
 
     // IN
     getN(len);
@@ -43,6 +43,7 @@ int main()
     read(v,len);
 
     // SHIFT
+    Shift(v,k);
 
     // OUT
     Print(v);
