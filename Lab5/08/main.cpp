@@ -1,17 +1,15 @@
 /*
- *  Mathe Ruben-Jonathan
+*  Mathe Ruben-Jonathan
  *  512
- *  Lab5/07
+ *  Lab5/08
  *
  *  Kijelentes:
- *  Adott 𝑛 folyamat. Minden folyamatnak ismerjuk az azonosıtojat (PID)
- *  es a vegrehajtashoz szukseges idoegyseget. A folyamatokat FIFO elv alapjan
- *  utemezzuk, azaz az elsonek beerkezett folyamatot hajtjuk vegre eloszor. ´Irjunk
- *  alkalmazast, amely a folyamatok utemezeset szimulalja, valamint hatarozzuk
- *  meg a folyamatok atlag varakozasi idejet
+ *  Adott 𝑛 folyamat. Minden folyamatnak ismerjuk az azonosıtojat (PID) es a
+ *  vegrehajtashoz szukseges idoegyseget.
+ *  Irjunk alkalmazast, amely a folyamatok utemezeset szimulalja, a kovetkezo
+ *  modon
  */
 
-#include <iomanip>
 #include <iostream>
 #include "Queue.h"
 
