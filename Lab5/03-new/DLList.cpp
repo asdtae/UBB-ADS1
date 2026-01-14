@@ -54,6 +54,25 @@ bool isEmpty(const DLList* v)
     return v->head == nullptr;
 }
 
+void Insert(DLList* v, type x)
+{
+    Node *p = CreateNode(x);
+
+    if(isEmpty(v))
+    {
+        v->head = p;
+        v->tail = p;
+    }
+    else
+    {
+        Node* q = v->tail;
+
+        q->next = p;
+        p->prev = q;
+        v->tail = p;
+    }
+}
+
 void Insert_Sorted(DLList* v, const type x)
 {
     Node *p = CreateNode(x);
@@ -95,7 +114,26 @@ void Insert_Sorted(DLList* v, const type x)
 
 void Shift(DLList* v, int k)
 {
-    
+    if(!(isEmpty(v) || v->head == v->tail || k == 0))
+    {
+        Node* p = v->head;
+        Node* q = v->tail;
+
+        p->prev = v->tail;
+        q->next = v->head;
+
+        Node* tmp = v->head;
+        for(int i = 0; i < k; i++)
+        {
+            tmp = tmp->next;
+        }
+
+        v->head = tmp;
+        v->tail = tmp->prev;
+
+        p->prev = nullptr;
+        q->next = nullptr;
+    }
 }
 
 void Print(const DLList* v)

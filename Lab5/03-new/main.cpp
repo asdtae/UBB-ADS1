@@ -25,7 +25,7 @@ void read(DLList* v, int &n)
     while(n > 0)
     {
         cin >> tmp;
-        Insert_Sorted(v,tmp);
+        Insert(v,tmp);
         n--;
     }
 }
