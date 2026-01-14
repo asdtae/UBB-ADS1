@@ -3,6 +3,4 @@ project(08)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(08 main.cpp
-        Queue.cpp
-        Queue.h)
+add_executable(08 main.cpp Queue.cpp)

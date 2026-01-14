@@ -22,32 +22,71 @@ void getN(int &n)
 
 int main()
 {
-    // INIT
-    int n;
+    int n = 0, timeOut = 0;
+    int targetPid = 0;;
+
     getN(n);
+    getN(timeOut);
 
-    Queue* q = Create();
+    Process* p = new Process[n];
 
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
-        Process p;
-        cin >> p.pid >> p.time;
-        Enqueue(q, p);
+        cin >> p[i].pid >> p[i].time;
     }
 
-    long long int currTime = 0;
-    long long int totalTime = 0;
+    cin >> targetPid;
+
+    int targetTime = 0;
+    for(int i = 0; i < n; ++i)
+    {
+        if(p[i].pid == targetPid)
+        {
+            targetTime = p[i].time;
+            break;
+        }
+    }
+
+    Queue* q = Create();
+    for (int i = 0; i < n; ++i)
+    {
+        Enqueue(q, p[i]);
+    }
+
+    delete[] p;
+
+    long long currTime = 0;
 
     while (!IsEmpty(q))
     {
         Process p = Dequeue(q);
-        totalTime += currTime;
-        currTime += p.time;
+
+        int execTime;
+        if (p.time > timeOut)
+        {
+            execTime = timeOut;
+        }
+        else
+        {
+            execTime = p.time;
+        }
+
+        currTime += execTime;
+        p.time -= execTime;
+
+        if (p.time > 0)
+        {
+            Enqueue(q, p);
+        }
+        else
+        {
+            if (p.pid == targetPid)
+            {
+                cout << currTime - targetTime << endl;
+                break;
+            }
+        }
     }
-
-    float res = (float)(totalTime) / n;
-
-    cout << fixed << setprecision(2) << res << endl;
 
     // CLEANUP
     Destroy(q);

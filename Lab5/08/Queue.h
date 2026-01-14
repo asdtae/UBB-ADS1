@@ -1,8 +1,18 @@
-//
-// Created by rbx on 1/14/2026.
-//
+#pragma once
 
-#ifndef INC_08_QUEUE_H
-#define INC_08_QUEUE_H
+struct Process
+{
+    int pid;
+    int time;
+};
 
-#endif //INC_08_QUEUE_H
+struct Queue;
+
+bool IsEmpty(Queue* q);
+
+Queue* Create();
+
+void Enqueue(Queue*, Process);
+Process Dequeue(Queue*);
+
+void Destroy(Queue*);
