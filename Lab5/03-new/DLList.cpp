@@ -119,8 +119,8 @@ void Shift(DLList* v, int k)
         Node* p = v->head;
         Node* q = v->tail;
 
-        p->prev = v->tail;
-        q->next = v->head;
+        p->prev = q;
+        q->next = p;
 
         Node* tmp = v->head;
         for(int i = 0; i < k; i++)
@@ -130,6 +130,9 @@ void Shift(DLList* v, int k)
 
         v->head = tmp;
         v->tail = tmp->prev;
+
+        p = v->head;
+        q = v->tail;
 
         p->prev = nullptr;
         q->next = nullptr;
