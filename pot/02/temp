@@ -1,0 +1,97 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+struct Node
+{
+    unsigned long long int data;
+    Node* next;
+};
+
+struct HashNode
+{
+    Node* entry;
+    HashNode* next;
+};
+
+struct Hashtable
+{
+    HashNode* head;
+    int size;
+    int nrOfItems;
+};
+
+Node* CreateNode()
+{
+    Node* p = new Node();
+
+    p->next = nullptr;
+    p->data = 0;
+
+    return p;
+}
+
+void DeleteNode(Node* p)
+{
+    if (p->next != nullptr)
+    {
+        DeleteNode(p->next);
+    }
+
+    delete p;
+}
+
+HashNode* CreateHashNode()
+{
+    HashNode* h = new HashNode();
+
+    h->next = nullptr;
+    h->entry = nullptr;
+
+    return h;
+}
+
+void DeleteHashNode(HashNode* h)
+{
+    if (h->next != nullptr)
+    {
+        if (h->entry != nullptr)
+        {
+            DeleteNode(h->entry);
+        }
+
+        DeleteHashNode(h->next);
+    }
+
+    delete h;
+}
+
+Hashtable* Create(const int size)
+{
+    Hashtable* h = new Hashtable();
+
+    h->head = nullptr;
+    h->size = size;
+    h->nrOfItems = 0;
+
+    // TODO: vegigmenni
+
+    return h;
+}
+
+void Destroy(Hashtable* h)
+{
+    if (h->head != nullptr)
+    {
+        DeleteHashNode(h->head);
+    }
+
+    delete h;
+}
+
+void Insert(Hashtable*, unsigned long long int);
+void Delete(Hashtable*, unsigned long long int);
+
+bool Find(Hashtable*, unsigned long long int);
+int Size(Hashtable*);
